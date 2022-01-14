@@ -11,7 +11,6 @@ const History = () => {
     if (!user) return <Center>
                         <CircularProgress isIndeterminate color="cyan.200" />
                       </Center>
-    console.log(user)
 
     return(
         <Stack spacing={0} bg="gray.100" flex={1}>

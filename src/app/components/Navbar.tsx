@@ -14,7 +14,6 @@ const Navbar = ({ points, changePoints, isHome }) => {
     if (!user) return <Center>
                         <CircularProgress isIndeterminate color="cyan.200" />
                       </Center>
-    console.log(user)
 
     if(first){
         changePoints(user.points)

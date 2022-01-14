@@ -3,7 +3,7 @@ import { Stack, Text, StackDivider, Center, Container } from "@chakra-ui/react"
 import ProductCard from "./ProductCard"
 
 const ProductsList = ({ history }) => {
-
+    console.log(history)
     return (
         <Center>
             <Container maxW="6xl">

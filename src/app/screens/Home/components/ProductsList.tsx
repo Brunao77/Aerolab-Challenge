@@ -22,8 +22,6 @@ const ProductList = ({points, changePoints}) => {
     if (!products) return <Center>
                             <CircularProgress isIndeterminate color="cyan.200" />
                           </Center>
-    console.log(products)
-
     return (
         <Center>
             <Container maxW="6xl">

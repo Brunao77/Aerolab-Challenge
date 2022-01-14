@@ -12,4 +12,7 @@ export default defineConfig({
       replacement: path.resolve(path.resolve(__dirname), "src"),
     },
   ],
+  define: {
+    'process.env': process.env,
+  },
 });

@@ -25,3 +25,8 @@ El usuario tiene una cantidad definida de puntos y cada producto vale una cantid
 ## Definiciones técnicas
 * La aplicación debe estar publicada y debe ser accesible mediante un link.
 * El código de la aplicación debe estar subida a un repositorio de público acceso.
+
+## Tecnologías utilizadas
+* JavaScript
+* React
+* Chakra UI

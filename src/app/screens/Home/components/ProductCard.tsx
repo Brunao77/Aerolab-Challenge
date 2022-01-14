@@ -29,10 +29,10 @@ const ProductCard = ({ points, product, changePoints, selected, changeSelected }
                     height={180}
                     justifyContent="flex-start"
                     alignItems="flex-end">
-                    {product.cost < points ?
+                    { product.cost < points ?
                         <Image width={6} height={6} src={buyBlue} />
                         :
-                        <Stack
+                        !selected && <Stack
                             bg="blackAlpha.600"
                             borderRadius={999}
                             direction="row"
@@ -51,30 +51,25 @@ const ProductCard = ({ points, product, changePoints, selected, changeSelected }
                 </Stack>
             </Stack>
             {selected &&
-                <Stack paddingBottom={41} spacing={0} left={0} top={0} height="100%" width="100%" position="absolute" bg="rgba(11,197,234,0.8)" alignItems="center" justifyContent="center">
-                    <Stack
-                        userSelect="none"
-                        paddingX={3}
-                        justifyContent="flex-start"
-                        maxHeight={100}
-                        width="100%"
-                        height="100%"
-                        alignItems="flex-end">
-                        <Image src={buyWhite} width={6} height={6} />
-                    </Stack>
+                <Stack left={0} top={0} height="100%" width="100%" position="absolute" bg="rgba(11,197,234,0.8)" alignItems="center" justifyContent="center">
+                    <Image userSelect="none" position="absolute" left="86%" top="4%" src={buyWhite} width={7} height={7} />
                     <Stack direction="row" alignItems="center">
                         <Text color="white" fontSize="max(2vw,30px)" lineHeight="none">{product.cost}</Text>
                         <Image src={coin} width={8} height={8} />
                     </Stack>
                     {product.cost < points ?
-                        <Button 
-                            onClick={()=>postRedeem(product._id).then(changePoints(points-product.cost))}>Redeem now</Button>
+                        <Button
+                            onClick={() => postRedeem(product._id).then(changePoints(points - product.cost))}>Redeem now</Button>
                         :
-                        <Stack alignItems="center">
-                            <Text>You don't have the necessary points</Text>
-                            <Text>You need {product.cost - points}</Text>
+                        <Stack alignItems="center" color="white">
+                            <Text fontWeight="500">Don't have the necessary points</Text>
+                            <Stack direction="row" alignItems="center" spacing={1}>
+                                <Text fontWeight="500">You need {product.cost - points}</Text>
+                                <Image src={coin} width={5} height={5} />
+                            </Stack>
+                            
                         </Stack>
-                        
+
                     }
                 </Stack>
             }

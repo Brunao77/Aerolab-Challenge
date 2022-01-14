@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import { Stack, Text, Image, Center, Container } from "@chakra-ui/react"
+import React from "react"
+import { Stack, Text, Image } from "@chakra-ui/react"
 import coin from "../../../../assets/icons/coin.svg"
 
 const ProductCard = ({ product }) => {

@@ -4,7 +4,7 @@ import logo from "../../assets/logo.svg";
 import coin from "../../assets/icons/coin.svg";
 import useUser from "../../hooks/useUser"
 import { postPoints } from "../../services/postPoints"
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = ({ points, changePoints, isHome }) => {
     const user = useUser()

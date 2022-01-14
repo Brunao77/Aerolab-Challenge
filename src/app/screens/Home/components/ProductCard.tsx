@@ -1,5 +1,5 @@
-import { Stack, Container, Text, Image, StackDivider, Button } from "@chakra-ui/react"
 import React from "react"
+import { Stack, Container, Text, Image, StackDivider, Button } from "@chakra-ui/react"
 import buyBlue from "../../../../assets/icons/buy-blue.svg"
 import buyWhite from "../../../../assets/icons/buy-white.svg"
 import coin from "../../../../assets/icons/coin.svg"

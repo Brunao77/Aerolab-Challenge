@@ -1,10 +1,13 @@
 {
   "name": "aerolab-challenge",
   "version": "0.0.0",
+  "homepage": "https://brunao77.github.io/Aerolab-Challenge",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.7.4",
